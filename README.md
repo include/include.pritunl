@@ -40,4 +40,4 @@ BSD
 Author Information
 ------------------
 
-Francisco Cabrita: <francisco.cabrita@gmail.com>
+Francisco Cabrita - francisco.cabrita@gmail.com
