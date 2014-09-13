@@ -1,0 +1,25 @@
+---
+
+- name: SYSTEM | download epel-release
+  get_url: url={{ epel_release_url }} dest=/tmp mode=0440
+  tags: get_epel
+
+- name: SYSTEM | install epel-release
+  yum: name=/tmp/{{ epel_release_pkg }} state=present
+  tags: install_epel
+
+- name: PRITUNL | download 
+  get_url: url={{ pritunl_url }} dest=/tmp mode=0440
+  tags: get_pritunl
+
+- name: PRITUNL | install
+  yum: name=/tmp/{{ pritunl_pkg }} state=present
+  tags: install_pritunl
+
+- name: PRITUNL | start service
+  service: name=pritunl state=started
+  tags: start_pritunl
+
+- name: PRITUNL | enable service
+  service: name=pritunl enabled=yes
+  tags: enable_pritunl

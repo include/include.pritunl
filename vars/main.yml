@@ -1,0 +1,16 @@
+---
+epel_release: 7-2
+epel_release_pkg: epel-release-{{ epel_release }}.noarch.rpm
+epel_release_url: http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/{{ epel_release_pkg }}
+
+pritunl_version: 0.10.12-1
+pritunl_pkg: pritunl-{{ pritunl_version }}.el7.centos.x86_64.rpm
+pritunl_url: http://pritunl.com/bin/{{ pritunl_pkg }}
+
+pritunl_admin_port: 9700
+
+# Pritunl defaults
+#
+# Admin Port: 9700
+# Admin username: admin
+# Admin password: admin
