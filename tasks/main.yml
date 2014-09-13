@@ -3,3 +3,7 @@
 - name: SYSTEM | check Centos version
   include: CentOS.yml
   when: ansible_distribution == 'CentOS' and ansible_distribution_major_version == '7'
+
+- name: SYSTEM | check Ubuntu
+  include: Ubuntu.yml
+  when: ansible_distribution == 'Ubuntu'
