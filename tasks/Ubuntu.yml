@@ -1,0 +1,20 @@
+---
+- name: Ubuntu | SYSTEM | update cache
+  apt: update_cache=yes
+  tags: update
+
+- name: Ubuntu | SYSTEM | install dependencies
+  apt: name=python-software-properties state=present
+  tags: install_reps
+
+- name: Ubuntu | SYSTEM | add apt repository
+  apt_repository: repo='ppa:pritunl/ppa' state=present
+  tags: add_repo
+
+- name: Ubuntu | SYSTEM | update cache
+  apt: update_cache=yes
+  tags: update
+
+- name: Ubuntu | PRITUNL | install
+  apt: name=pritunl update_cache=yes state=present
+  tags: install_pritunl
